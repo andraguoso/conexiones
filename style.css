@@ -7,16 +7,16 @@ body {
 }
 
 #og-layout {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
-.og-row {
+/*.og-row {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
+}*/
 
 .yellow,
 .purple,
@@ -27,7 +27,6 @@ body {
     height: 30px;
     padding: 10px;
     text-align: center;
-    text-justify: center;
     border-radius: 5%;
 }
 
@@ -37,6 +36,13 @@ body {
 .green.select {
     background-color: #5a594e;
     color: white;
+}
+
+.yellow.picked,
+.purple.picked,
+.blue.picked,
+.green.picked {
+    display: none;
 }
 
 #yellow-row,
