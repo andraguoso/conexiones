@@ -27,10 +27,22 @@ grid.addEventListener("click", event => {
             else if (selected[i].classList.contains("green")) g++;
             else y++;
         }
-        if (p === 4) purple.classList.toggle("chosen");
-        else if (b === 4) blue.classList.toggle("chosen");
-        else if (g === 4) green.classList.toggle("chosen");
-        else if (y === 4) yellow.classList.toggle("chosen");
+        if (p === 4) {
+            purple.classList.toggle("chosen");
+            for (var i = 0; i < 4; i++) selected[i].classList.remove("select"), selected[i].classList.toggle("picked");
+        }
+        else if (b === 4) {
+            blue.classList.toggle("chosen");
+            for (var i = 0; i < 4; i++) selected[i].classList.remove("select"), selected[i].classList.toggle("picked");
+        }
+        else if (g === 4) {
+            green.classList.toggle("chosen");
+            for (var i = 0; i < 4; i++) selected[i].classList.remove("select"), selected[i].classList.toggle("picked");
+        }
+        else if (y === 4) {
+            yellow.classList.toggle("chosen");
+            for (var i = 0; i < 4; i++) selected[i].classList.remove("select"), selected[i].classList.toggle("picked");
+        }
         else {
             if (p == 3 || b === 3 || g === 3 || y === 3) oneAway.classList.toggle("show");
             for (var i = 0; i < 4; i++) {
