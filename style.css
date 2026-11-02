@@ -55,6 +55,7 @@ body {
 #yellow-row.chosen {
     display: flex;
     flex-direction: column;
+    /* width: full; */
     padding: 10px;
     background-color: #f9df6e;
 }
@@ -62,6 +63,7 @@ body {
 #purple-row.chosen {
     display: flex;
     flex-direction: column;
+    /* width: full; */
     padding: 10px;
     background-color: #ba81c4;
 }
