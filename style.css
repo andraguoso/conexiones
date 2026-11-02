@@ -12,6 +12,20 @@ body {
     gap: 10px;
 }
 
+#oneAway {
+    display: none;
+}
+
+#oneAway.show {
+    display: block;
+    background-color: black;
+    color: white;
+    opacity: 75%;
+    padding: 7px;
+    border-radius: 3px;
+    text-align: center;
+}
+
 /*.og-row {
     display: flex;
     flex-direction: row;
@@ -22,6 +36,9 @@ body {
 .purple,
 .blue,
 .green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #efefe6;
     width: 80px;
     height: 30px;
@@ -56,6 +73,9 @@ body {
     display: flex;
     flex-direction: column;
     /* width: full; */
+    width: 410px;
+    border-radius: 5px;
+    text-align: center;
     padding: 10px;
     background-color: #f9df6e;
 }
@@ -64,6 +84,9 @@ body {
     display: flex;
     flex-direction: column;
     /* width: full; */
+    width: 410px;
+    border-radius: 5px;
+    text-align: center;
     padding: 10px;
     background-color: #ba81c4;
 }
@@ -71,6 +94,9 @@ body {
 #blue-row.chosen {
     display: flex;
     flex-direction: column;
+    width: 410px;
+    border-radius: 5px;
+    text-align: center;
     padding: 10px;
     background-color: #b1c4ef;
 }
@@ -78,6 +104,9 @@ body {
 #green-row.chosen {
     display: flex;
     flex-direction: column;
+    width: 410px;
+    border-radius: 5px;
+    text-align: center;
     padding: 10px;
     background-color: #a0c45a;
 }
