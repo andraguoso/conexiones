@@ -26,6 +26,14 @@ body {
     text-align: center;
 }
 
+#betterLuck {
+    display: none;
+}
+
+#betterLuck.time-out {
+    display: block;
+}
+
 /*.og-row {
     display: flex;
     flex-direction: row;
