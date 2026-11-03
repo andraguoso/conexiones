@@ -3,13 +3,24 @@ const blue = document.getElementById("blue-row");
 const green = document.getElementById("green-row");
 const yellow = document.getElementById("yellow-row");
 
+const oneAway = document.getElementById("oneAway");
+const luck = document.getElementById("betterLuck");
 const grid = document.getElementById("og-layout");
+
 let selected = [];
+
+let dots = document.getElementById("tries");
+let tries = 4;
+dots.textContent = "• ".repeat(tries);
 
 grid.addEventListener("click", event => {
     const target = event.target;
 
-    if (selected.includes(target)) return;
+    if (selected.includes(target)) {
+        target.classList.remove("select");
+        selected.pop();
+        return;
+    }
 
     selected.push(target);
     target.classList.toggle("select");
@@ -44,11 +55,14 @@ grid.addEventListener("click", event => {
             for (var i = 0; i < 4; i++) selected[i].classList.remove("select"), selected[i].classList.toggle("picked");
         }
         else {
+            tries--;
             if (p == 3 || b === 3 || g === 3 || y === 3) oneAway.classList.toggle("show");
             for (var i = 0; i < 4; i++) {
                 selected[i].classList.remove("select");
             }
+            dots.textContent = "• ".repeat(tries);
         }
+        if (tries === 0) luck.classList.toggle("time-out");
         selected = [];
     }
 });
