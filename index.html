@@ -6,81 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Conexiones</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
 </head>
 
-<body>
-    <h1>Conexiones</h1>
-    <span>¡Crea cuatro grupos de cuatro!</span>
-
-    <span id="oneAway">Te quedaste a una...</span>
-
-    <span id="betterLuck">¡Ten mejor suerte para la próxima!</span>
-
-    <div id="yellow-row">
-        <span><b>JERGAS PARA LLAMAR A UN AMIGO</b></span>
-        <span>YUNTA, CAUSA, SOLI, PATA</span>
-    </div>
-    <div id="green-row">
-        <span><b>INGREDIENTES DEL CEVICHE</b></span>
-        <span>LIMÓN, PESCADO, AJÍ LIMO, CEBOLLA</span>
-    </div>
-    <div id="blue-row">
-        <span><b>PARTES DE LA RES QUE SE COMEN A LA PARRILLA</b></span>
-        <span>CORAZÓN, PANZA, INTESTINO, LIBRILLO</span>
-    </div>
-    <div id="purple-row">
-        <span><b>NOMBRES ARTÍSTICOS DE DJs SIN SU APELATIVO</b></span>
-        <span>KELVIN, BRYAN, PELIGRO, WARNER</span>
-    </div>
-
-    <div id="og-layout">
-        <span class="purple">PELIGRO</span>
-
-        <span class="yellow">PATA</span>
-
-        <span class="green">LIMÓN</span>
-
-        <span class="blue">CORAZÓN</span>
-
-        <span class="green">PESCADO</span>
-
-        <span class="blue">LIBRILLO</span>
-
-        <span class="purple">WARNER</span>
-
-        <span class="yellow">SOLI</span>
-
-        <span class="yellow">YUNTA</span>
-
-        <span class="purple">KELVIN</span>
-
-        <span class="blue">PANZA</span>
-
-        <span class="green">CEBOLLA</span>
-
-        <span class="blue">INTESTINO</span>
-
-        <span class="yellow">CAUSA</span>
-
-        <span class="green">AJÍ LIMO</span>
-
-        <span class="purple">BRYAN</span>
-    </div>
-
-    <div>
-        <span>Intentos:
-            <span id="tries"></span>
+<body class="">
+    <main class="flex flex-col min-h-screen gap-5 text-center justify-center items-center">
+        <span class="text-[8.0vh] text-bold">Conexiones</span>
+        <span class="w-120">
+            Juego de asociación de palabras: junta cuatro palabras en cuatro grupos distintos tratando de adivinar una
+            relación por grupo.
         </span>
-    </div>
-
-    <footer>
-        <span>
-            Desarrollado por
-            <a href="https://github.com/andraguoso">@andraguoso</a>
-            para Snowglobe Hack Club 2026
+        <button id="play" class="bg-black px-3 py-2 text-white w-32 rounded-full">Jugar</button>
+        <span class="flex flex-col gap-2 items-center">
+            <span id="today-date" class="text-bold"></span>
+            <span>No. 1</span>
+            <span>Por Andrea Aguilar</span>
         </span>
-    </footer>
+    </main>
+
+    <article>
+        <span class="text-[6.0vh] text-bold">Conexiones</span>
+        <span>¡Crea cuatro grupos de cuatro!</span>
+
+        <span id="oneAway">Te quedaste a una...</span>
+
+        <span id="betterLuck">¡Ten mejor suerte para la próxima!</span>
+
+        <div class="flex flex-col gap-2">
+            <div id="yellow-row">
+                <span><b>JERGAS PARA LLAMAR A UN AMIGO</b></span>
+                <span>YUNTA, CAUSA, SOLI, PATA</span>
+            </div>
+            <div id="green-row">
+                <span><b>INGREDIENTES DEL CEVICHE</b></span>
+                <span>LIMÓN, PESCADO, AJÍ LIMO, CEBOLLA</span>
+            </div>
+            <div id="blue-row">
+                <span><b>PARTES DE LA RES QUE SE COMEN A LA PARRILLA</b></span>
+                <span>CORAZÓN, PANZA, INTESTINO, LIBRILLO</span>
+            </div>
+            <div id="purple-row">
+                <span><b>NOMBRES ARTÍSTICOS DE DJs SIN SU APELATIVO</b></span>
+                <span>KELVIN, BRYAN, PELIGRO, WARNER</span>
+            </div>
+        </div>
+
+        <div id="og-layout">
+            <span class="purple">PELIGRO</span>
+
+            <span class="yellow">PATA</span>
+
+            <span class="green">LIMÓN</span>
+
+            <span class="blue">CORAZÓN</span>
+
+            <span class="green">PESCADO</span>
+
+            <span class="blue">LIBRILLO</span>
+
+            <span class="purple">WARNER</span>
+
+            <span class="yellow">SOLI</span>
+
+            <span class="yellow">YUNTA</span>
+
+            <span class="purple">KELVIN</span>
+
+            <span class="blue">PANZA</span>
+
+            <span class="green">CEBOLLA</span>
+
+            <span class="blue">INTESTINO</span>
+
+            <span class="yellow">CAUSA</span>
+
+            <span class="green">AJÍ LIMO</span>
+
+            <span class="purple">BRYAN</span>
+        </div>
+
+        <div>
+            <span>Intentos:
+                <span id="tries"></span>
+            </span>
+        </div>
+
+        <footer class="flex flex-col gap-5">
+            <div id="hack-club-question" class="flex flex-row items-center text-center gap-7">
+                <span>Are you from Hack Club and want to test this game?</span>
+                <button id="help-button" class="bg-black py-1 text-white w-36 rounded-full">YES, HELP ME</button>
+            </div>
+            <div id="hack-club-help">
+                <span>YELLOR ROW: YUNTA, CAUSA, SOLI, PATA</span>
+                <span>GREEN ROW: LIMÓN, PESCADO, AJÍ LIMO, CEBOLLA</span>
+                <span>BLUE ROW: CORAZÓN, PANZA, INTESTINO, LIBRILLO</span>
+                <span>PURPLE ROW: KELVIN, BRYAN, PELIGRO, WARNER</span>
+            </div>
+            <span>
+                Desarrollado por
+                <a href="https://github.com/andraguoso">@andraguoso</a>
+                para Snowglobe Hack Club 2026
+            </span>
+        </footer>
+    </article>
     <script src="script.js"></script>
 </body>
 
