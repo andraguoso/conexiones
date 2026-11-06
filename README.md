@@ -1,5 +1,5 @@
 # conexiones
-Connections tailored towards Peruvian users
+The New York Times Games' Connections, but tailored towards Peruvian users.
 ## tools
 HTML, plain CSS and vanilla JavaScript. 
 ## process
