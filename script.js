@@ -25,6 +25,8 @@ const yellow = document.getElementById("yellow-row");
 
 const oneAway = document.getElementById("oneAway");
 const luck = document.getElementById("betterLuck");
+const up = document.getElementById("arriba");
+
 const grid = document.getElementById("og-layout");
 
 const help = document.getElementById("help-button");
@@ -35,6 +37,8 @@ let selected = [];
 let dots = document.getElementById("tries");
 let tries = 4;
 dots.textContent = "• ".repeat(tries);
+
+up.textContent = "¡Crea cuatro grupos de cuatro!";
 
 grid.addEventListener("click", event => {
     const target = event.target;
@@ -87,11 +91,13 @@ grid.addEventListener("click", event => {
         }
         if (tries === 0) {
             grid.classList.toggle("end");
-            dots.textContent = "¡Ya no hay más intentos! Puedes reiniciar la página y jugar otra vez.";
+            dots.textContent = "¡Ya no hay más intentos!";
+            up.textContent = "Puedes reiniciar la página y jugar otra vez.";
             luck.classList.toggle("time-out");
         }
         if (purple.classList.contains("chosen") && green.classList.contains("chosen") && yellow.classList.contains("chosen") && blue.classList.contains("chosen")) {
             okHelp.classList.remove("needed");
+            up.textContent = "¡Lo resolviste! c:";
         }
         selected = [];
     }
