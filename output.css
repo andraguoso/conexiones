@@ -9,6 +9,9 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
+    --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-black: #000;
+    --color-white: #fff;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -157,9 +160,6 @@
   }
   .text-\[8\.0vh\] {
     font-size: 8.0vh;
-  }
-  .text-blue-400 {
-    color: var(--color-blue-400);
   }
   .text-blue-700 {
     color: var(--color-blue-700);
